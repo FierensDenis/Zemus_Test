@@ -1,10 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
+import Form from './components/Form';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Image 
+        source={require('./assets/Logo_zemus.png')}
+        style={styles.logo} 
+      />
+      <Text style={styles.title}>Connexion</Text>
+      <Form />
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +19,16 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  logo: {
+    width: 287,
+    height: 216
+  },
+  title: {
+    color: "#3f60a8",
+    fontSize: 32,
+    marginVertical:40
+  }
 });
